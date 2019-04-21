@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+class HanXin{
+	public:
+//	int a[10]; 	
+	HanXin(){
+		y=0;
+	}
+	void line3(int n){
+		o=n;
+	//	return o; 
+	}
+	void line5(int b){
+		p=b;
+	//	return p;
+	}
+	void line7(int c){
+		q=c;
+	//	return q;
+	}
+	void showMany(){
+		int p1=0;
+		for(int i=10;i<=100;i++){	
+			if(i%3==o){
+				if(i%5==p){
+					if(i%7==q){
+						y=i;
+						p1=1;
+						std::cout<<y<<endl;
+						break;
+					}
+				}
+			}
+		}
+		if(p1==0)
+		std::cout<<"Impossible"<<endl;
+			
+	}
+private:
+	int y,o,p,q;;
+};
+int main() {
+
+    int n, n1, n2,n3;
+
+    std::cin >> n;
+
+    for(int i = 0; i < n; ++i) {
+
+        std::cin >> n1 >> n2 >> n3;
+
+        HanXin hx;  
+
+        hx.line3(n1);  
+
+        hx.line5(n2);   
+
+        hx.line7(n3);   
+
+        hx.showMany();
+
+    }
+	return  0;
+}
